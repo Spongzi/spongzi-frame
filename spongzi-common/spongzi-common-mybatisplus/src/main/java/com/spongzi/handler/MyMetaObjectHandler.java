@@ -18,7 +18,7 @@ public class MyMetaObjectHandler implements MetaObjectHandler {
 
     @Override
     public void updateFill(MetaObject metaObject) {
-        this.strictInsertFill(metaObject, "updateBy", String.class, "spongzi");
-        this.strictInsertFill(metaObject, "updateTime", Date.class, new Date());
+        this.strictUpdateFill(metaObject, "updateBy", String.class, "spongzi");
+        this.strictUpdateFill(metaObject, "updateTime", Date.class, new Date());
     }
 }
