@@ -10,5 +10,19 @@ import com.spongzi.user.entity.dto.UserDto;
  */
 public interface UserService {
 
+    /**
+     * 添加用户
+     *
+     * @param userDto 用户数据收件人
+     * @return int
+     */
     int addUser(UserDto userDto);
+
+    /**
+     * 删除
+     *
+     * @param id ID
+     * @return {@link Boolean}
+     */
+    int delete(Long id);
 }

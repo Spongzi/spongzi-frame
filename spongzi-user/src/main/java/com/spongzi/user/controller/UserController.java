@@ -5,13 +5,12 @@ import com.spongzi.user.entity.dto.UserDto;
 import com.spongzi.user.entity.req.UserReq;
 import com.spongzi.user.service.UserService;
 import org.springframework.beans.BeanUtils;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 
 @RestController
+@RequestMapping("user")
 public class UserController {
 
     @Resource
@@ -23,5 +22,11 @@ public class UserController {
         BeanUtils.copyProperties(userReq, userDto);
         int count = userService.addUser(userDto);
         return Result.ok(count);
+    }
+
+    @DeleteMapping("/{id}")
+    public Result<Integer> delete(@PathVariable Long id) {
+        Integer result = userService.delete(id);
+        return Result.ok(result);
     }
 }

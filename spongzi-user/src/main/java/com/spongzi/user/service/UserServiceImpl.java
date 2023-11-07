@@ -27,4 +27,9 @@ public class UserServiceImpl implements UserService {
         BeanUtils.copyProperties(userDto, userPo);
         return userMapper.insert(userPo);
     }
+
+    @Override
+    public int delete(Long id) {
+        return userMapper.deleteById(id);
+    }
 }
