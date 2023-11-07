@@ -1,8 +1,11 @@
 package com.spongzi.user.entity.po;
 
 import com.baomidou.mybatisplus.annotation.*;
+import com.spongzi.entity.BaseEntity;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -12,8 +15,11 @@ import java.util.Date;
  * @date 2023/11/07
  */
 @Data
+@EqualsAndHashCode(callSuper = true)
 @TableName("user")
-public class UserPo {
+public class UserPo extends BaseEntity implements Serializable {
+
+    private static final long serialVersionUID = -9088784851664786546L;
 
     @TableId(type = IdType.ASSIGN_ID)
     private Long id;
@@ -22,21 +28,4 @@ public class UserPo {
 
     private Integer age;
 
-    @TableField(fill = FieldFill.INSERT)
-    private String createBy;
-
-    @TableField(fill = FieldFill.INSERT)
-    private Date createTime;
-
-    @TableField(fill = FieldFill.UPDATE)
-    private String updateBy;
-
-    @TableField(fill = FieldFill.UPDATE)
-    private Date updateTime;
-
-    @TableField(fill = FieldFill.INSERT)
-    private Integer deleteFlag;
-
-    @TableField(fill = FieldFill.INSERT)
-    private Integer version;
 }
