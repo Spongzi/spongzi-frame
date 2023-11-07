@@ -1,6 +1,6 @@
 package com.spongzi.user.controller;
 
-import com.spongzi.Result;
+import com.spongzi.bean.Result;
 import com.spongzi.entity.PageResult;
 import com.spongzi.user.entity.dto.UserDto;
 import com.spongzi.user.entity.po.UserPo;
