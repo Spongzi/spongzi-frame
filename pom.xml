@@ -10,6 +10,8 @@
     <modules>
         <module>spongzi-user</module>
         <module>spongzi-common</module>
+        <module>spongzi-common/spongzi-common-web</module>
+        <module>spongzi-common/spongzi-common-mybatisplus</module>
     </modules>
     <modelVersion>4.0.0</modelVersion>
 
@@ -27,6 +29,19 @@
         <version>2.4.2</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.spongzi</groupId>
+            <artifactId>spongzi-common-web</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.spongzi</groupId>
+            <artifactId>spongzi-common-mybatisplus</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
     <repositories>
         <repository>
