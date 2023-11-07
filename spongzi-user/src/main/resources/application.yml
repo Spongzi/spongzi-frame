@@ -36,3 +36,12 @@ mybatis-plus:
     db-config:
       logic-delete-value: 1
       logic-not-delete-value: 0
+
+swagger:
+  base-package: com.spongzi
+  title: spongzi-frame
+  contact-name: spongzi
+  description: 从0到1开箱即用
+  version: 1.0.0
+  url: 地址
+  email: spongziw@163.com

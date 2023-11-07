@@ -10,6 +10,9 @@
     </parent>
 
     <packaging>pom</packaging>
+    <modules>
+        <module>spongzi-common-swagger</module>
+    </modules>
 
     <artifactId>spongzi-common</artifactId>
 
