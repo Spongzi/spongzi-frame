@@ -1,7 +1,9 @@
 package com.spongzi.user.controller;
 
 import com.spongzi.user.entity.dto.UserDto;
+import com.spongzi.user.entity.req.UserReq;
 import com.spongzi.user.service.UserService;
+import org.springframework.beans.BeanUtils;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,7 +17,9 @@ public class UserController {
     private UserService userService;
 
     @PostMapping("user")
-    public int addUser(@RequestBody UserDto userDto) {
+    public Integer addUser(@RequestBody UserReq userReq) {
+        UserDto userDto = new UserDto();
+        BeanUtils.copyProperties(userReq, userDto);
         return userService.addUser(userDto);
     }
 }
