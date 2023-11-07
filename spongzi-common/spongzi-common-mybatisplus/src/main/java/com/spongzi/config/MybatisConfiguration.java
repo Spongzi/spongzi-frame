@@ -1,6 +1,7 @@
 package com.spongzi.config;
 
 import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;
+import com.spongzi.inteceptor.SqlBeautyInterceptor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -8,9 +9,7 @@ import org.springframework.context.annotation.Configuration;
 public class MybatisConfiguration {
 
     @Bean
-    public MybatisPlusInterceptor mybatisPlusInterceptor(){
-        MybatisPlusInterceptor mybatisPlusInterceptor = new MybatisPlusInterceptor();
-        mybatisPlusInterceptor.addInnerInterceptor(new MybatisPlusAllSqlLog());
-        return mybatisPlusInterceptor;
+    public SqlBeautyInterceptor sqlBeautyInterceptor() {
+        return new SqlBeautyInterceptor();
     }
 }
