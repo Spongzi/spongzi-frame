@@ -24,3 +24,7 @@ spring:
           slow-sql-millis: 2000
         wall:
           enabled: true
+# 是否开启sql优化器
+sql:
+  beauty:
+    show: true
