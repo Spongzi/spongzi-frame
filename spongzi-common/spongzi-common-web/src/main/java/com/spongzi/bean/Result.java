@@ -1,4 +1,4 @@
-package com.spongzi;
+package com.spongzi.bean;
 
 import lombok.Data;
 

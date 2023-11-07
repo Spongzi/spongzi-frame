@@ -1,4 +1,4 @@
-package com.spongzi;
+package com.spongzi.bean;
 
 /**
  * 结果消息
