@@ -1,9 +1,10 @@
-package com.spongzi.user.service;
+package com.spongzi.user.service.impl;
 
 
 import com.spongzi.user.entity.dto.UserDto;
 import com.spongzi.user.entity.po.UserPo;
 import com.spongzi.user.mapper.UserMapper;
+import com.spongzi.user.service.UserService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 
