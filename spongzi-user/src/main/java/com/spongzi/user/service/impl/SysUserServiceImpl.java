@@ -1,11 +1,11 @@
 package com.spongzi.user.service.impl;
 
 import com.spongzi.bean.PageResponse;
-import com.spongzi.user.dao.SysUserDao;
+import com.spongzi.user.convert.SysUserConvert;
+import com.spongzi.user.mapper.SysUserDao;
 import com.spongzi.user.entity.po.SysUser;
 import com.spongzi.user.entity.req.SysUserReq;
 import com.spongzi.user.service.SysUserService;
-import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -41,8 +41,7 @@ public class SysUserServiceImpl implements SysUserService {
      */
     @Override
     public PageResponse<SysUser> queryByPage(SysUserReq sysUserReq) {
-        SysUser sysUser = new SysUser();
-        BeanUtils.copyProperties(sysUserReq, sysUser);
+        SysUser sysUser = SysUserConvert.INSTANCE.convertReqToPo(sysUserReq);
         PageResponse<SysUser> pageResponse = new PageResponse<>();
         pageResponse.setCurrent(sysUserReq.getPageNo());
         pageResponse.setPageSize(sysUserReq.getPageSize());
