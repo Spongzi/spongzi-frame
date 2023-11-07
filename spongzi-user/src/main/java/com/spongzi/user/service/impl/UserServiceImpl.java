@@ -1,6 +1,9 @@
 package com.spongzi.user.service.impl;
 
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.spongzi.entity.PageResult;
 import com.spongzi.user.entity.dto.UserDto;
 import com.spongzi.user.entity.po.UserPo;
 import com.spongzi.user.mapper.UserMapper;
@@ -32,5 +35,14 @@ public class UserServiceImpl implements UserService {
     @Override
     public int delete(Long id) {
         return userMapper.deleteById(id);
+    }
+
+    @Override
+    public PageResult<UserPo> getUserPage(UserDto userDto) {
+        IPage<UserPo> userPoPage = new Page<>(userDto.getPageIndex(), userDto.getPageSize());
+        IPage<UserPo> userPage = userMapper.getUserPage(userPoPage);
+        PageResult<UserPo> userPoPageResult = new PageResult<>();
+        userPoPageResult.loadData(userPage);
+        return userPoPageResult;
     }
 }

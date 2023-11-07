@@ -1,6 +1,8 @@
 package com.spongzi.user.service;
 
+import com.spongzi.entity.PageResult;
 import com.spongzi.user.entity.dto.UserDto;
+import com.spongzi.user.entity.po.UserPo;
 
 /**
  * 用户服务
@@ -25,4 +27,12 @@ public interface UserService {
      * @return {@link Boolean}
      */
     int delete(Long id);
+
+    /**
+     * 获取用户页面
+     *
+     * @param userDto 用户数据收件人
+     * @return {@link PageResult}<{@link UserPo}>
+     */
+    PageResult<UserPo> getUserPage(UserDto userDto);
 }
