@@ -1,7 +1,9 @@
-package com.spongzi.user.dao;
+package com.spongzi.user.mapper;
 
 import com.spongzi.user.entity.po.SysUser;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
+
 import java.util.List;
 
 /**
@@ -10,6 +12,7 @@ import java.util.List;
  * @author spongzi
  * @since 2023-11-07 15:56:34
  */
+@Mapper
 public interface SysUserDao {
 
     /**
@@ -23,9 +26,9 @@ public interface SysUserDao {
     /**
      * 按限制查询全部
      *
-     * @param sysUser  查询条件
-     * @param pageNo   页码
-     * @param pageSize 页面大小
+     * @param sysUser   查询条件
+     * @param pageStart 页码
+     * @param pageSize  页面大小
      * @return 对象列表
      */
     List<SysUser> queryAllByLimit(SysUser sysUser, @Param("pageStart") Long pageStart, @Param("pageSize") Long pageSize);
