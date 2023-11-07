@@ -1,5 +1,6 @@
 package com.spongzi.user.controller;
 
+import com.spongzi.Result;
 import com.spongzi.user.entity.dto.UserDto;
 import com.spongzi.user.entity.req.UserReq;
 import com.spongzi.user.service.UserService;
@@ -17,9 +18,10 @@ public class UserController {
     private UserService userService;
 
     @PostMapping("user")
-    public Integer addUser(@RequestBody UserReq userReq) {
+    public Result<Integer> addUser(@RequestBody UserReq userReq) {
         UserDto userDto = new UserDto();
         BeanUtils.copyProperties(userReq, userDto);
-        return userService.addUser(userDto);
+        int count = userService.addUser(userDto);
+        return Result.ok(count);
     }
 }
