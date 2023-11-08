@@ -1,5 +1,6 @@
 package com.spongzi.user.controller;
 
+import com.spongzi.redis.util.RedisUtil;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,7 +17,7 @@ import javax.annotation.Resource;
 public class TestController {
 
     @Resource
-    private StringRedisTemplate stringRedisTemplate;
+    private RedisUtil redisUtil;
 
     @GetMapping("/test")
     public String test(){
@@ -25,6 +26,6 @@ public class TestController {
 
     @GetMapping("/testRedis")
     public void testRedis(){
-        stringRedisTemplate.opsForValue().set("name", "zhangsan");
+        redisUtil.set("name", "zhangsan");
     }
 }
