@@ -1,4 +1,4 @@
-package com.spongzi.user.mapper;
+package com.spongzi.user.dao;
 
 import com.spongzi.user.entity.po.SysUser;
 import org.apache.ibatis.annotations.Mapper;

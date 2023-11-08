@@ -13,7 +13,7 @@ import org.springframework.context.annotation.ComponentScan;
  * @date 2023/11/06
  */
 @SpringBootApplication
-@MapperScan("com.spongzi.*.mapper")
+@MapperScan("com.spongzi.*.dao")
 @ComponentScan("com.spongzi")
 @EnableCaching
 public class UserApplication {

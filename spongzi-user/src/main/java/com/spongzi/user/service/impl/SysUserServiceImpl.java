@@ -2,7 +2,7 @@ package com.spongzi.user.service.impl;
 
 import com.spongzi.bean.PageResponse;
 import com.spongzi.user.convert.SysUserConvert;
-import com.spongzi.user.mapper.SysUserDao;
+import com.spongzi.user.dao.SysUserDao;
 import com.spongzi.user.entity.po.SysUser;
 import com.spongzi.user.entity.req.SysUserReq;
 import com.spongzi.user.service.SysUserService;
