@@ -7,6 +7,7 @@
         <groupId>com.spongzi</groupId>
         <artifactId>spongzi-dependencies</artifactId>
         <version>1.0.0-SNAPSHOT</version>
+        <relativePath />
     </parent>
 
     <artifactId>spongzi-user</artifactId>
@@ -15,38 +16,43 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <ape.common.version>1.0.0-SNAPSHOT</ape.common.version>
+        <spongzi.common.version>1.0.0-SNAPSHOT</spongzi.common.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>com.spongzi</groupId>
             <artifactId>spongzi-common-starter</artifactId>
-            <version>${ape.common.version}</version>
+            <version>${spongzi.common.version}</version>
         </dependency>
         <dependency>
             <groupId>com.spongzi</groupId>
             <artifactId>spongzi-common-web</artifactId>
-            <version>${ape.common.version}</version>
+            <version>${spongzi.common.version}</version>
         </dependency><dependency>
         <groupId>com.spongzi</groupId>
         <artifactId>spongzi-common-mybatisplus</artifactId>
-        <version>${ape.common.version}</version>
+        <version>${spongzi.common.version}</version>
     </dependency>
         <dependency>
             <groupId>com.spongzi</groupId>
             <artifactId>spongzi-common-swagger</artifactId>
-            <version>${ape.common.version}</version>
+            <version>${spongzi.common.version}</version>
         </dependency>
         <dependency>
             <groupId>com.spongzi</groupId>
             <artifactId>spongzi-common-redis</artifactId>
-            <version>${ape.common.version}</version>
+            <version>${spongzi.common.version}</version>
         </dependency>
         <dependency>
             <groupId>com.spongzi</groupId>
             <artifactId>spongzi-common-log</artifactId>
-            <version>${ape.common.version}</version>
+            <version>${spongzi.common.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.spongzi</groupId>
+            <artifactId>spongzi-common-tool</artifactId>
+            <version>${spongzi.common.version}</version>
         </dependency>
         <dependency>
             <groupId>org.mapstruct</groupId>
