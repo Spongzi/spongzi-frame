@@ -57,3 +57,5 @@ swagger:
   version: 1.0.0
   url: 地址
   email: spongziw@163.com
+logging:
+  config: classpath:log4j2-spring.xml
