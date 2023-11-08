@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.spongzi</groupId>
-        <artifactId>spongzi-frame</artifactId>
+        <artifactId>spongzi-dependencies</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
@@ -15,9 +15,39 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <ape.common.version>1.0.0-SNAPSHOT</ape.common.version>
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>com.spongzi</groupId>
+            <artifactId>spongzi-common-starter</artifactId>
+            <version>${ape.common.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.spongzi</groupId>
+            <artifactId>spongzi-common-web</artifactId>
+            <version>${ape.common.version}</version>
+        </dependency><dependency>
+        <groupId>com.spongzi</groupId>
+        <artifactId>spongzi-common-mybatisplus</artifactId>
+        <version>${ape.common.version}</version>
+    </dependency>
+        <dependency>
+            <groupId>com.spongzi</groupId>
+            <artifactId>spongzi-common-swagger</artifactId>
+            <version>${ape.common.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.spongzi</groupId>
+            <artifactId>spongzi-common-redis</artifactId>
+            <version>${ape.common.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.spongzi</groupId>
+            <artifactId>spongzi-common-log</artifactId>
+            <version>${ape.common.version}</version>
+        </dependency>
         <dependency>
             <groupId>org.mapstruct</groupId>
             <artifactId>mapstruct</artifactId>
@@ -27,10 +57,6 @@
             <groupId>org.mapstruct</groupId>
             <artifactId>mapstruct-processor</artifactId>
             <version>1.4.2.Final</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-log4j2</artifactId>
         </dependency>
     </dependencies>
 </project>

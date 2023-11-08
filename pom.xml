@@ -10,9 +10,7 @@
     <modules>
         <module>spongzi-user</module>
         <module>spongzi-common</module>
-        <module>spongzi-common/spongzi-common-web</module>
-        <module>spongzi-common/spongzi-common-mybatisplus</module>
-        <module>spongzi-common/spongzi-common-redis</module>
+        <module>spongzi-dependencies</module>
     </modules>
     <modelVersion>4.0.0</modelVersion>
 

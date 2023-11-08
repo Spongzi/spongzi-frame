@@ -5,21 +5,52 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.spongzi</groupId>
-        <artifactId>spongzi-frame</artifactId>
+        <artifactId>spongzi-dependencies</artifactId>
         <version>1.0.0-SNAPSHOT</version>
+        <relativePath/>
     </parent>
 
+    <artifactId>spongzi-common</artifactId>
     <packaging>pom</packaging>
     <modules>
         <module>spongzi-common-swagger</module>
+        <module>spongzi-common-mybatisplus</module>
+        <module>spongzi-common-redis</module>
+        <module>spongzi-common-web</module>
+        <module>spongzi-common-log</module>
+        <module>spongzi-common-starter</module>
     </modules>
 
-    <artifactId>spongzi-common</artifactId>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.spongzi</groupId>
+                <artifactId>spongzi-common-redis</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.spongzi</groupId>
+                <artifactId>spongzi-common-mybatisplus</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.spongzi</groupId>
+                <artifactId>spongzi-common-swagger</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.spongzi</groupId>
+                <artifactId>spongzi-common-web</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 </project>
