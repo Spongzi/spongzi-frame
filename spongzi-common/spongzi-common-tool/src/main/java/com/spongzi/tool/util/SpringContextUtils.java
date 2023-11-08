@@ -13,6 +13,12 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.util.Map;
 
+/**
+ * spring context utils
+ *
+ * @author spong
+ * @date 2023/11/08
+ */
 @Component
 public class SpringContextUtils implements ApplicationContextAware {
 
