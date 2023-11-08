@@ -24,6 +24,18 @@ spring:
           slow-sql-millis: 2000
         wall:
           enabled: true
+  redis:
+    host: 120.24.188.168
+    port: 6379
+    password: spongzi
+    database: 0
+    timeout: 10000
+    lettuce:
+      pool:
+        max-active: 8
+        max-idle: 8
+        max-wait: 10000
+        min-idle: 0
 # 是否开启sql优化器
 sql:
   beauty:
