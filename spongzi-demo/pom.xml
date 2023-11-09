@@ -7,7 +7,7 @@
         <groupId>com.spongzi</groupId>
         <artifactId>spongzi-dependencies</artifactId>
         <version>1.0.0-SNAPSHOT</version>
-        <relativePath />
+        <relativePath/>
     </parent>
 
     <artifactId>spongzi-demo</artifactId>
@@ -29,11 +29,12 @@
             <groupId>com.spongzi</groupId>
             <artifactId>spongzi-common-web</artifactId>
             <version>${spongzi.common.version}</version>
-        </dependency><dependency>
-        <groupId>com.spongzi</groupId>
-        <artifactId>spongzi-common-mybatisplus</artifactId>
-        <version>${spongzi.common.version}</version>
-    </dependency>
+        </dependency>
+        <dependency>
+            <groupId>com.spongzi</groupId>
+            <artifactId>spongzi-common-mybatisplus</artifactId>
+            <version>${spongzi.common.version}</version>
+        </dependency>
         <dependency>
             <groupId>com.spongzi</groupId>
             <artifactId>spongzi-common-swagger</artifactId>
@@ -70,4 +71,66 @@
             <version>1.4.2.Final</version>
         </dependency>
     </dependencies>
+
+    <build>
+        <!--配置静态-->
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*.*</include>
+                </includes>
+            </resource>
+            <!--springboot使用的web资源要编译到META-INF/resources-->
+            <resource>
+                <directory>src/main/webapp</directory>
+                <targetPath>META-INF/resources</targetPath>
+                <includes>
+                    <include>**/*.*</include>
+                </includes>
+            </resource>
+            <resource>
+                <directory>src/main/resources/</directory>
+                <filtering>true</filtering><!-- 就是这个 -->
+                <includes>
+                    <include>**/*</include>
+                </includes>
+            </resource>
+        </resources>
+    </build>
+    <profiles>
+        <profile>
+            <id>local</id>
+            <properties>
+                <env-flag>local</env-flag>
+            </properties>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
+        <profile>
+            <id>beta</id>
+            <properties>
+                <env-flag>beta</env-flag>
+            </properties>
+        </profile>
+        <profile>
+            <id>test</id>
+            <properties>
+                <env-flag>test</env-flag>
+            </properties>
+        </profile>
+        <profile>
+            <id>prod</id>
+            <properties>
+                <env-flag>prod</env-flag>
+            </properties>
+        </profile>
+    </profiles>
 </project>
