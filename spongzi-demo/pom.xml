@@ -10,7 +10,7 @@
         <relativePath />
     </parent>
 
-    <artifactId>spongzi-user</artifactId>
+    <artifactId>spongzi-demo</artifactId>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
