@@ -20,6 +20,7 @@
         <module>spongzi-common-log</module>
         <module>spongzi-common-starter</module>
         <module>spongzi-common-tool</module>
+        <module>spongzi-common-websocket</module>
     </modules>
 
 

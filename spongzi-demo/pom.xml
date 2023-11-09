@@ -55,6 +55,11 @@
             <version>${spongzi.common.version}</version>
         </dependency>
         <dependency>
+            <groupId>com.spongzi</groupId>
+            <artifactId>spongzi-common-websocket</artifactId>
+            <version>${spongzi.common.version}</version>
+        </dependency>
+        <dependency>
             <groupId>org.mapstruct</groupId>
             <artifactId>mapstruct</artifactId>
             <version>1.4.2.Final</version>

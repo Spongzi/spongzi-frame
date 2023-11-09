@@ -62,3 +62,6 @@ logging:
 log:
   aspect:
     enable: true
+guava:
+  cache:
+    switch: true
